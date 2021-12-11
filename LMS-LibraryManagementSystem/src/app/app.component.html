@@ -1,0 +1,64 @@
+<mat-toolbar class="toolbar-content" *ngIf="showHead">
+
+  <div>
+    <img class="librarian-icon" src="/assets/images/librarian.png" alt="Librarian">
+  </div>
+
+  <button><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
+
+  <h1 class="h1-title">Library Mangement System</h1>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="button-menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>account_circle</mat-icon>
+      <span>Librarian</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav  #sidenav opened ="false" mode="side" > 
+        <mat-list class="list">
+        
+          <mat-list-item> 
+              <mat-icon class="icon">grid_view</mat-icon>
+              <a routerLink="dashboard" routerLinkActive="active" class="effect-underline">Dashboard</a>
+          </mat-list-item>
+          
+          <mat-list-item> 
+              <mat-icon class="icon">library_add</mat-icon>
+              <a routerLink="addbooks" routerLinkActive="active" class="effect-underline">Add Books</a>
+          </mat-list-item>
+        
+          <mat-list-item>
+              <mat-icon class="icon">manage_search</mat-icon>
+              <a routerLink="managebooks" routerLinkActive="active" class="effect-underline">Manage Books</a>
+          </mat-list-item>
+        
+          <mat-list-item> 
+              <mat-icon class="icon">library_books</mat-icon>
+              <a routerLink="issuebooks" routerLinkActive="active" class="effect-underline">Issue Books</a>
+          </mat-list-item>
+    
+          <mat-list-item> 
+            <mat-icon class="icon">library_books</mat-icon>
+            <a routerLink="issuedbooks" routerLinkActive="active" class="effect-underline">Issued Book</a>
+          </mat-list-item>
+
+       </mat-list> 
+
+  </mat-sidenav>
+
+<mat-sidenav-content>
+<router-outlet></router-outlet>
+</mat-sidenav-content>
+
+</mat-sidenav-container> 

@@ -1,0 +1,55 @@
+.login-field {
+    width: 320px;
+}
+
+.password-field {
+    width: 320px;
+}
+
+
+.login-card {
+    display: block;
+    position: fixed;
+    top: 30%;
+    left: 41%;
+    right: 41%;
+}
+
+.login-button {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 320px;
+}
+
+.librarian-icon {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-h1 {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.register-h1 {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+#rcorners1 {
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background: #EDE9E8;
+    padding: 20px; 
+    width: 320px;
+    height: 350px;  
+}

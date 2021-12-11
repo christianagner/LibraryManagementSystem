@@ -1,0 +1,33 @@
+<div id="rcorners1">
+    <div>
+        <img class="librarian-icon" src="/assets/images/librarian.png" alt="Librarian">
+    </div>
+
+    <h1 class="login-h1">Library Portal</h1>
+
+    <div class="login-container">
+        <mat-form-field class="login-field" appearance="fill">
+        <mat-label>Librarian ID</mat-label>
+        <input matInput placeholder="0000-1111" [formControl]="librarianid" required>
+        <mat-error *ngIf="librarianid.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    
+    <div class="password-container">
+        <mat-form-field class="password-field" appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        </mat-form-field>
+    </div>
+
+    <button class="login-button" mat-raised-button color="primary">Login</button>
+
+    <h1 class="register-h1">New? <a routerLink="/register">Register</a>
+    
+    </h1>
+
+
+</div>
